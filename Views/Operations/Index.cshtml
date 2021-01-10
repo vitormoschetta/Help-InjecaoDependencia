@@ -1,0 +1,48 @@
+<table class="table table-hover table-sm">
+    <thead>
+        <tr>
+            <th>Operation</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Transient</td>
+            <td>@ViewBag.Transient.Id</td>
+        </tr>
+        <tr>
+            <td>Scoped</td>
+            <td>@ViewBag.Scoped.Id</td>
+        </tr>
+        <tr>
+            <td>Singleton</td>
+            <td>@ViewBag.Singleton.Id</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-hover table-sm">
+    <thead>
+        <tr>
+            <th>Operation</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Transient</td>
+            <td>@ViewBag.Service.TransientOperation.Id</td>
+        </tr>
+        <tr>
+            <td>Scoped</td>
+            <td>@ViewBag.Service.ScopedOperation.Id</td>
+        </tr>
+        <tr>
+            <td>Singleton</td>
+            <td>@ViewBag.Service.SingletonOperation.Id</td>
+        </tr>
+    </tbody>
+</table>

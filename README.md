@@ -145,3 +145,14 @@ No código acima informamos ao serviço de injeção de dependencia do .NET Core
 
 Referência:  
 <https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection>
+<br>
+<br>
+
+
+# Tempo de Vida da Instancia em DI
+Existem três tipos de configurações em se tratando de tempo de vida de uma instância feita pelo serviço de DI do NET Core:
+
+1. Transient
+2. Scoped
+3. Singleton
+

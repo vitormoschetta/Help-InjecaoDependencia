@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Help_InjecaoDependencia.Interfaces;
+using Help_InjecaoDependencia.Models;
 using Help_InjecaoDependencia.Repositories;
+using Help_InjecaoDependencia.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,15 +24,21 @@ namespace Help_InjecaoDependencia
 
         public IConfiguration Configuration { get; }
 
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
             services.AddSingleton<CustommerRepository>();
+
             services.AddSingleton<IProductRepository, ProductRepository>();
+
+            services.AddTransient<IOperationTransient, Operation>();
+            services.AddScoped<IOperationScoped, Operation>();
+            services.AddSingleton<IOperationSingleton, Operation>();            
+            services.AddTransient<OperationService, OperationService>();
         }
 
-        
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -40,7 +48,7 @@ namespace Help_InjecaoDependencia
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-               
+
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
