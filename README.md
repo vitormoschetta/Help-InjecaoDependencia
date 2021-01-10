@@ -150,9 +150,27 @@ Referência:
 
 
 # Tempo de Vida da Instancia em DI
-Existem três tipos de configurações em se tratando de tempo de vida de uma instância feita pelo serviço de DI do NET Core:
+
+Quando configuramos a injeção de dependência na classe _Startup_, como fizemos no exemplo anterior, podemos configurar o tempo de vida útil
+de cada tipo de instância. No exemplo anterior informamos _AddSingleton_. Existem ainda outros dois tipos no .NET Core, conforme segue abaixo:
 
 1. Transient
 2. Scoped
 3. Singleton
 
+## Transient
+Faz com que seja realizada uma nova instancia para cada Controller / Serviço que implementa a classe. 
+
+## Scoped
+Informa ao DI do NET Core que para cada request / requisição deve-se usar uma única instância da classe, independente de quantos Controllers / Serviços a utilizam.
+
+## Singleton
+Esse tipo de DI mantém uma única instância para todas as requisições.
+
+Você pode executar o projeto e verificar a diferença:  
+<https://localhost:5001/operations> 
+<br>
+
+Referências:
+<https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection-usage>
+<https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences>
