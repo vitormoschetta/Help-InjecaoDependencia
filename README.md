@@ -141,10 +141,10 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 No código acima informamos ao serviço de injeção de dependencia do .NET Core que todas as chamadas para a Interface _IProductRepository_ deve-se utilizar a implementação concreta _ProductRepository_.
+<br>
 
-
-Referência:  
-<https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection>
+###### Referência:
+> <https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection>
 <br>
 <br>
 
