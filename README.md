@@ -170,7 +170,9 @@ Esse tipo de DI mantém uma única instância para todas as requisições.
 Você pode executar o projeto e verificar a diferença:  
 <https://localhost:5001/operations> 
 <br>
+<br>
 
-Referências:
-<https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection-usage>
-<https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences>
+
+###### Referências:
+> <https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection-usage>
+> <https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences>
